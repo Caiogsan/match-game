@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 import Input from './form/Input.js';
 import Button from './form/Button.js';
 import AfterLogin from '../pages/AfterLog.js';
@@ -52,18 +52,17 @@ function FormLogin(){
 
         if(nomeVerif && passVerif){setTeste(true)}
             } else {
+                
                 window.alert('Digite uma senha')
-                setUsername('')
-                setPassword('')
+                
             }
         } else {
+            
             window.alert('Digite um nome')
-            setUsername('')
-            setPassword('')
+            
         }
 
-        setUsername('')
-        setPassword('')
+        
             
     }
     

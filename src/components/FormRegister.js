@@ -8,7 +8,7 @@ function FormRegister(){
     const [user, setUser] = useState({})
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState()
-    const [email, setEmail] = useState()
+    const [email, setEmail] = useState('')
     function createUser(e){
         e.preventDefault()
        if(username && password && email){
@@ -32,9 +32,7 @@ function FormRegister(){
         bot.classList.add("disabled:opacity-75")
        } else {
         window.alert('Missing field!')
-        setUsername('')
-        setEmail('')
-        setPassword('')
+        
        }
     } 
     console.log(user)
