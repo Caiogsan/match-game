@@ -9,10 +9,8 @@ let level1 = true
 let level2 = false
 window.onload = () => {all = []; acertou = []; listaVerific = []; level1 = true; level2 = false}
 function Card({image, id, winOrLoss, styles}){
-    
-    
-
     const [currentCard, setCurrentCard] = useState('back')
+
     function click(){
         console.log(acertou)
         all.push(id)
@@ -72,14 +70,12 @@ function Card({image, id, winOrLoss, styles}){
         window.location.reload()
        }
     }
-    
+
     return (
-        
         <div id={`${id}`} className={`rounded hover:cursor-pointer hover:scale-110 duration-300 ${styles} w-56`}>
             {
                 currentCard === 'back' ? <CardBack clicou={click} /> : <CardFront imagem={image}/>
-            }
-           
+            } 
         </div>
     )
 }

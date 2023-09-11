@@ -3,9 +3,6 @@ import BeforeLogin from "./pages/BeforeLog";
 import AfterLogin from "./pages/AfterLog";
 import Register from "./pages/Register";
 
-
-
-
 function App() {
   return (
     <Router>

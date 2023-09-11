@@ -11,6 +11,7 @@ function FormLogin(){
     const [name, setName] = useState()
     const [allData, setAllData] = useState([])
     const [teste, setTeste] = useState(false)
+    
     useEffect(() => {
         fetch("http://localhost:5000/accounts", {
         method: "GET",
@@ -25,7 +26,7 @@ function FormLogin(){
     const handleOnSubmit = (e) => {
         const texto = document.querySelector('#text')
         texto.innerHTML = 'Unfortunately git-hub pages does not support back-end so the login page is not working! Feel free to test on your local machine, it will work!'
-       setName(username)
+        setName(username)
         e.preventDefault()
         if(username){
             if(password){
@@ -49,17 +50,12 @@ function FormLogin(){
         }
         verificaPass()
 
-        if(nomeVerif && passVerif){
-            
-            setTeste(true)
-            
-        }
+        if(nomeVerif && passVerif){setTeste(true)}
             } else window.alert('Digite uma senha')
         } else window.alert('Digite um nome')
-        
-            
-            setUsername('')
-            setPassword('')
+
+        setUsername('')
+        setPassword('')
             
     }
     

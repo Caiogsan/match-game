@@ -7,7 +7,6 @@ import Level2 from "../components/Level2"
 function AfterLogin({nome, deslogar}){
     let [winOrPerdeu1, setwinOrPerdeu1] = useState('')
     
-    
     return (
         <div className="h-full flex flex-col bg-gradient-to-br  from-blue-600 to-red-300 to-gray-200">
             <Header logout={deslogar} nome={nome} level={winOrPerdeu1 ? 'Level 2' : 'Level 1'} ></Header>
