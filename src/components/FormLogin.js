@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Input from './form/Input.js';
 import Button from './form/Button.js';
 import AfterLogin from '../pages/AfterLog.js';
@@ -23,6 +23,8 @@ function FormLogin(){
     const loginPasswords = allData.map((e) => e.password)
     
     const handleOnSubmit = (e) => {
+        const texto = document.querySelector('#text')
+        texto.innerHTML = 'Unfortunately git-hub pages does not support back-end so the login page is not working! Feel free to test on your local machine, it will work!'
        setName(username)
         e.preventDefault()
         if(username){
@@ -71,7 +73,7 @@ function FormLogin(){
         {teste ? <AfterLogin deslogar={logout} nome={name}></AfterLogin> : <div className="h-[80%] flex flex-col justify-between py-10">
             <h1 className="text-center text-black  font-bold font-login text-6xl">LET'S PLAY SOME MATCHING GAMES!!</h1>
             <div className="flex flex-col w-full">
-                <h2 className="text-center pb-12 font-login text-black text-4xl font-bold">Login to Your Account</h2>
+                <h2 id='text' className="text-center pb-12 font-login text-black text-4xl font-bold">Login to Your Account</h2>
                 <form onSubmit={handleOnSubmit} className="flex flex-col pb-2 items-center">
                     <Input name={'teste'} handleOnChange={(e) => setUsername(e.target.value)} type={'text'} placeholder={'Username'} styles={'mb-8 bg-gradient-to-br from-gray-200 to-red-300 to-blue-400 w-[20%] rounded text-center'}></Input>
                     <Input name={'teste'} handleOnChange={(e) => setPassword(e.target.value)} type={'password'} placeholder={'Password'} styles={"mb-8 bg-gradient-to-br from-blue-300 to-red-300 to-gray-200 w-[20%] rounded text-center"}></Input>
