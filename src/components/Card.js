@@ -7,9 +7,14 @@ let acertou = []
 let all = []
 let level1 = true
 let level2 = false
-function Card({image, id, winOrLoss}){
-    let [currentCard, setCurrentCard] = useState('back')
+window.onload = () => {all = []; acertou = []; listaVerific = []; level1 = true; level2 = false}
+function Card({image, id, winOrLoss, styles}){
+    
+    
+
+    const [currentCard, setCurrentCard] = useState('back')
     function click(){
+        console.log(acertou)
         all.push(id)
         if(level1){
             if(listaVerific.length >= 4){
@@ -31,13 +36,12 @@ function Card({image, id, winOrLoss}){
         }
         listaVerific.push(id)
         
-        console.log(listaVerific)
-        console.log(acertou)
+        
         
     }
     if(level1){
         if(acertou.length >= 4){
-            window.alert('voce ganhou!')
+            window.alert('You won level 1!')
             all = []
             acertou = []
             listaVerific = []
@@ -49,13 +53,13 @@ function Card({image, id, winOrLoss}){
     
     if(level1){
         if(all.length >= 8){
-            window.alert('Voce perdeu! :(')
+            window.alert('You lost! :(')
             window.location.reload()
         }
     }
     if(level2){
         if(acertou.length >= 6){
-            window.alert('voce ganhou!')
+            window.alert('You have won the game, congrats!!')
             all = []
             acertou = []
             listaVerific = []
@@ -70,7 +74,8 @@ function Card({image, id, winOrLoss}){
     }
     
     return (
-        <div id={`${id}`} className="rounded h-12 hover:cursor-pointer hover:scale-110 duration-300 w-56 h-80">
+        
+        <div id={`${id}`} className={`rounded hover:cursor-pointer hover:scale-110 duration-300 ${styles} w-56`}>
             {
                 currentCard === 'back' ? <CardBack clicou={click} /> : <CardFront imagem={image}/>
             }

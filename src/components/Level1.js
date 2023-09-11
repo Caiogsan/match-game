@@ -9,18 +9,18 @@ function Level1({winOrLost}){
     let listImg = [imagem1, imagem2, imagem3, imagem4, imagem5]
     let winOrLose = winOrLost
     return (
-        <div className="flex gap-8 flex-col py-6">
+        <div className="flex bg-gradient-to-br  from-blue-600 to-red-300 to-gray-200 gap-8  flex-col py-6">
                 <div className="flex justify-evenly">
-                    <Card image={listImg[0]} winOrLoss={winOrLose} id={0}></Card>
-                    <Card image={listImg[1]} winOrLoss={winOrLose} id={1}></Card>
-                    <Card image={listImg[3]} winOrLoss={winOrLose} id={3}></Card>
-                    <Card image={listImg[1]} winOrLoss={winOrLose} id={1}></Card>
+                    <Card image={listImg[0]} winOrLoss={winOrLose} styles={'h-80'} id={0}></Card>
+                    <Card image={listImg[1]} winOrLoss={winOrLose} styles={'h-80'} id={1}></Card>
+                    <Card image={listImg[3]} winOrLoss={winOrLose} styles={'h-80'} id={3}></Card>
+                    <Card image={listImg[1]} winOrLoss={winOrLose} styles={'h-80'} id={1}></Card>
                 </div>
                 <div className="flex justify-evenly">
-                    <Card image={listImg[3]} winOrLoss={winOrLose} id={3}></Card>
-                    <Card image={listImg[2]} winOrLoss={winOrLose} id={2}></Card>
-                    <Card image={listImg[0]} winOrLoss={winOrLose} id={0}></Card>
-                    <Card image={listImg[2]} winOrLoss={winOrLose} id={2}></Card>
+                    <Card image={listImg[3]} winOrLoss={winOrLose} styles={'h-80'} id={3}></Card>
+                    <Card image={listImg[2]} winOrLoss={winOrLose} styles={'h-80'} id={2}></Card>
+                    <Card image={listImg[0]} winOrLoss={winOrLose} styles={'h-80'} id={0}></Card>
+                    <Card image={listImg[2]} winOrLoss={winOrLose} styles={'h-80'} id={2}></Card>
                 </div>
         </div>
     )
