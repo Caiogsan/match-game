@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <Routes> 
-        <Route path="/" exact element={<BeforeLogin />}></Route>
+        <Route path="/match-game" exact element={<BeforeLogin />}></Route>
         <Route path="/home" exact element={<AfterLogin />}></Route>
         <Route path="/register" exact element={<Register />}></Route>
       </Routes>

@@ -44,7 +44,7 @@ function FormRegister(){
                     <button type="submit" id='botao' className="font-login text-2xl font-bold hover:scale-110 duration-300">Register</button>
                     
                 </form>
-                <Link to={'/'} className='text-[10px] pb-2 w-[20%] m-auto'>Login?</Link>
+                <Link to={'/match-game'} className='text-[10px] pb-2 w-[20%] m-auto'>Login?</Link>
             </div>
         </div>
     )
