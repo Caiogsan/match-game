@@ -30,7 +30,12 @@ function FormRegister(){
         const bot = document.querySelector('#botao')
         bot.innerHTML = 'Cadastrado'
         bot.classList.add("disabled:opacity-75")
-       } else window.alert('Missing field!')
+       } else {
+        window.alert('Missing field!')
+        setUsername('')
+        setEmail('')
+        setPassword('')
+       }
     } 
     console.log(user)
     return (
