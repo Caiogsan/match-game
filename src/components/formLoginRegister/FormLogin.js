@@ -1,8 +1,8 @@
 import {Link} from 'react-router-dom';
 import { useEffect, useState } from "react"
-import Input from './form/Input.js';
-import Button from './form/Button.js';
-import AfterLogin from '../pages/AfterLog.js';
+import Input from '../form/Input.js';
+import Button from '../form/Button.js';
+import AfterLogin from '../../pages/AfterLog.js';
 
 
 function FormLogin(){

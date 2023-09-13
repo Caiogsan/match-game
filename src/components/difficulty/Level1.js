@@ -1,9 +1,9 @@
-import Card from "../components/Card"
-import imagem1 from "../img/7.png"
-import imagem2 from "../img/2.png"
-import imagem3 from "../img/3.png"
-import imagem4 from "../img/4.png"
-import imagem5 from "../img/5.png"
+import Card from "../cards/Card"
+import imagem1 from "../../img/7.png"
+import imagem2 from "../../img/2.png"
+import imagem3 from "../../img/3.png"
+import imagem4 from "../../img/4.png"
+import imagem5 from "../../img/5.png"
 
 function Level1({winOrLost}){
     let listImg = [imagem1, imagem2, imagem3, imagem4, imagem5]

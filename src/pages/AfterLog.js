@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import Header from "../components/Header"
-import Level1 from "../components/Level1"
-import Level2 from "../components/Level2"
+import Level1 from "../components/difficulty/Level1"
+import Level2 from "../components/difficulty/Level2"
 
 
 function AfterLogin({nome, deslogar}){

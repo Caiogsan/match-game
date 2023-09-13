@@ -1,6 +1,6 @@
 
 import {Link} from 'react-router-dom';
-import Input from './form/Input';
+import Input from '../form/Input';
 import { useState } from 'react';
 
 function FormRegister(){
