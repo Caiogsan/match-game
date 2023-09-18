@@ -13,19 +13,19 @@ function FormLogin(){
     const [teste, setTeste] = useState(false)
     
     useEffect(() => {
-        fetch("http://localhost:5000/accounts", {
+        fetch("https://api.jsonbin.io/v3/b/64ff60058d92e126ae6a8559", {
         method: "GET",
         headers: {
             'Content-type':'application/json'
         }
-    }).then((resp) => resp.json().then((data) => {setAllData(data)})).catch((e) => console.log(e))}, [])
+    }).then((resp) => resp.json().then((data) => {setAllData(data.record.accounts)})).catch((e) => console.log(e))}, [])
 
     const loginNames = allData.map((e) => e.name)
     const loginPasswords = allData.map((e) => e.password)
     
+    
     const handleOnSubmit = (e) => {
         const texto = document.querySelector('#text')
-        texto.innerHTML = 'Unfortunately git-hub pages does not support back-end so the login page is not working! Feel free to test on your local machine, it will work! The code is avaliable on github.'
         setName(username)
         e.preventDefault()
         if(username){

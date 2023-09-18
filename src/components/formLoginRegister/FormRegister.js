@@ -13,23 +13,25 @@ function FormRegister(){
         e.preventDefault()
        if(username && password && email){
         
-        user.name = username
-        user.password = password
-        user.email = email
+        
 
-        fetch("http://localhost:5000/accounts", {
+        fetch("https://api.jsonbin.io/v3/b/64ff60058d92e126ae6a8559", {
         method: "POST",
         headers: {
             'Content-type':'application/json'
         },
         body: JSON.stringify(user)
-        }).then((resp) => resp.json()).then((data) => setUser(data))
-        setUsername('')
-        setEmail('')
-        setPassword('')
+        }).then((resp) => resp.json()).then((data) => setUser(data.record.accounts))
+        
+        user.name = username
+        user.password = password
+        user.email = email
         const bot = document.querySelector('#botao')
         bot.innerHTML = 'Cadastrado'
         bot.classList.add("disabled:opacity-75")
+        setUsername('')
+        setEmail('')
+        setPassword('')
        } else {
         window.alert('Missing field!')
         
